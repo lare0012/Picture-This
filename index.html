@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Picture This!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Picture This!</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <header class="header">
+      <div class="title">
+        <h1>Picture This!</h1>
+        <h4>My Really Cool Blog Post</h4>
+      </div>
+    <picture>
+          <source
+            srcset="images/museum.jpg"
+            media="(min-width: 960px)"
+          />
+          <source srcset="images/museum-480x.jpg" media="(min-width: 320px)" />
+          <source srcset="images/museum-960x.jpg" media="(min-width: 640px)" />
+          
 
-<body>
-  <header class="header">
-    <div class="title">
-      <h1>Picture This!</h1>
-      <h4>My Really Cool Blog Post</h4>
-    </div>
-    <img src="images/museum.jpg" alt="placeholder">
+              <source
+            srcset="images/museum.jpg"
+            media="(max-width: 960px)"
+          />
+          <source srcset="images/museum-960x960.jpg" media="(max-width 960px)" />
+          <source srcset="images/museum-1280x1280.jpg" media="(max-width: 1600px)" />
 
-  </header>
-</body>
-
+          <img src="./images/museum.jpg" alt="art museum" />
+        </picture>
+    </header>
+  </body>
 </html>
